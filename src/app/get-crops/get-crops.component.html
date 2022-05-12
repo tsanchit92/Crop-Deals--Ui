@@ -1,0 +1,69 @@
+
+<table class="container">
+  
+    <thead>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <h1>Id</h1>
+            </td>
+            <td>
+                <h1>Name</h1>
+            </td>
+            <td>
+                <h1>Type</h1>
+            </td>
+            <td>
+                <h1>Quantity</h1>
+            </td>
+            <td>
+                <h1>Price</h1>
+            </td>
+            <td>
+                <h1>Action</h1>
+            </td>
+            <td>
+                <h1>Action</h1>
+            </td>
+            <td>
+                <h1>Action</h1>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of crops">
+            <td><img  src="../images/rye-crop-secale-cereale-close-600w-1589160673.ico"></td>
+            <td>{{item.id}}</td>
+            <td>{{item.cropName}}</td>
+            <td>{{item.cropType}}</td>
+            <td>{{item.cropQuantity}}</td>
+            <td>{{item.price}}</td>
+            <td  style=" background-color: rgba(0, 0, 0, 0);">
+                <button  type="button" (click)="onAddCrt(item)">Add-to-cart</button>
+            </td>
+            <td style=" background-color: none;">
+                <button  type="button" (click)="onRate(item.id)">Rate-Farmer</button>
+            </td>
+            <td style="background-color: none;">
+             <button  type="button" (click)="ongetAddress(item)">Get-Address</button> 
+         
+
+        </td>
+    </tbody>
+</table>
+<form *ngIf="clicked" >
+    <label  >House No</label>
+    <input type="text"name ="house-no"  [(ngModel)]="address.houseNo">
+    <label  >Locality</label>
+    <input type="text"name ="locality" [(ngModel)]="address.locality">
+    <label  >Town</label>
+    <input type="text"name ="town" [(ngModel)]="address.town">
+    <label  >District</label>
+    <input type="text"name ="district" [(ngModel)]="address.district">
+    <label  >State</label>
+    <input type="text"name ="state" [(ngModel)]="address.State">
+    <label  >PostalCode</label>
+    <input type="text" name ="postalCode" [(ngModel)]="address.postalCode">
+</form>
+

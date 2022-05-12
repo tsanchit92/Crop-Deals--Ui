@@ -1,0 +1,87 @@
+
+<div style="text-align: center; padding: 10px;margin:10px "><h3>Profile Edit</h3></div>
+<div class="form-container">
+<form id="crop-form" (ngSubmit)="onClickSubmit(farmerModel)"  >
+
+    <div  class="row" >
+        <label class="col">First-Name</label>
+        <input  class="col" name="firstName" type="text"  id="name" required placeholder="First-Name" [(ngModel)]="farmerModel.firstName">
+    </div>
+
+    <div  class="row">
+        <label class="col">Last-Name</label>
+        <input  class="col" type="text" name="lastName"  id="name" placeholder="Last-Name" [(ngModel)]="farmerModel.lastName">
+    </div>
+
+    <div  class="row" >
+        <label class="col">E-mail Address</label>
+        <input  class="col"  type="email" name="email" id="phone" required placeholder="E-Mail" [(ngModel)]="farmerModel.email">
+    </div>
+
+    <div  class="row" >
+        <label class="col">Phone Number</label>
+        <input  class="col" type="number" name="phone" id="phone" placeholder="Phone" [(ngModel)]="farmerModel.contact">
+    </div>
+
+<div  class="row" >
+        <label class="col">User-Name</label>
+        <input  class="col" type="text" name="userName" id="phone"  placeholder="User-Name" [(ngModel)]="farmerModel.userName">
+    </div>
+
+<div  class="row" >
+        <label class="col">Password</label>
+        <input  class="col" type="password" name="password" id="phone" placeholder="Password" [(ngModel)]="farmerModel.password">
+    </div>
+
+<div  class="row" >
+        <label class="col">House-No.</label>
+        <input  class="col" type="text" name="houseNo" id="phone" placeholder="House-No" [(ngModel)]="farmerModel.houseNo">
+    </div>
+
+<div  class="row" >
+        <label class="col">Locality</label>
+        <input  class="col" type="text" name="locality" id="phone" placeholder="Locality" [(ngModel)]="farmerModel.locality">
+    </div>
+
+<div  class="row" >
+        <label class="col">Town</label>
+        <input  class="col" type="text" name="town" id="phone" placeholder="Town" [(ngModel)]="farmerModel.town">
+    </div>
+
+<div  class="row" >
+        <label class="col">District</label>
+        <input  class="col" type="text" name="district" id="phone" placeholder="District" [(ngModel)]="farmerModel.district">
+    </div>
+
+<div  class="row" >
+        <label class="col">State</label>
+        <input  class="col" type="text" name="state" id="phone" placeholder="District" [(ngModel)]="farmerModel.state">
+    </div>
+
+<div  class="row" >
+        <label class="col">Postal-Code</label>
+        <input  class="col" type="number" name="postalCode" id="phone" placeholder="Postal-Code" [(ngModel)]="farmerModel.postalCode">
+    </div>
+
+
+<div  class="row" >
+        <label class="col">Bank-Account-No</label>
+        <input  class="col" type="number" name="bankAccountNo" id="phone" placeholder="Bank-Account-No" [(ngModel)]="farmerModel.bankAccountNo">
+    </div>
+
+<div  class="row" >
+        <label class="col">IFSC</label>
+        <input  class="col" type="text"  name="ifsc" id="phone" placeholder="IFSC" [(ngModel)]="farmerModel.ifscCode">
+    </div>
+
+<div  class="row" >
+        <label class="col">Bank-Account-Holder-Name</label>
+        <input  class="col" type="text"  name="bankAccountHolderName" id="phone" placeholder="Bank-Account-Holder-Name" [(ngModel)]="farmerModel.bankAccountHolderName">
+    </div>
+
+    <div  class="row" >
+        <button type="submit" >Submit</button>
+    </div>
+
+</form>
+</div>

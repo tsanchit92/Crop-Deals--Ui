@@ -1,0 +1,60 @@
+<table class="container">
+    <thead>
+        <tr>
+            <td>
+                CartId
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Type
+            </td>
+            <td>
+                Price
+            </td>
+            <td>
+                Id
+            </td>
+            <td>
+                Quantity
+            </td>
+            <td>
+                Cost
+            </td>
+            <td>
+                Action
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of carts.carttotalItems">
+            <td>{{item.id}}
+            </td>
+            <td>{{item.cropName}}
+            </td>
+            <td>{{item.cropType}}
+            </td>
+            <td>{{item.cropPrice}}
+            </td>
+            <td>{{item.cropId}}
+            </td>
+            <td>{{item.quantity}}
+            </td>
+            <td>{{item.cost}}
+            </td>
+            <td><button type="button" (click)="onDelete(cart,item.id)">Remove-item</button>
+            </td>
+        </tr>
+   
+    <tr>
+        <td>
+            Total-Bill = {{carts.totalBill}}
+        </td>
+        <td >
+            <!-- <button (click)="checkOut(carts.totalBill)">CheckOut</button> -->
+            <button style="color:white;"(click)="paymentClicked(carts.totalBill)">Checkout</button>
+        </td>
+    </tr>
+</tbody>
+</table>

@@ -1,0 +1,44 @@
+<table  class="container">
+    <thead>
+        <tr>
+        <td>
+              ID
+        </td>
+        <td>
+            Name
+        </td>
+        <td>
+            Type
+        </td>
+        <td>
+            Quantity
+        </td>
+        <td>
+           Price
+        </td>
+        <td>
+            Action
+        </td>
+    </tr>
+    </thead>
+  
+<tbody>
+    <tr *ngFor ="let item of crops">
+        
+        <td>{{item.id}}
+        </td>
+        <td>{{item.cropName}}
+        </td>
+        <td>{{item.cropType}}
+        </td>
+        <td>{{item.cropQuantity}}
+        </td>
+        <td>{{item.price}}
+        </td>
+        <td ><button  (click)="onDelete(item.id)">Delete</button>
+        </td>
+       
+        
+    </tr>
+</tbody>
+</table>

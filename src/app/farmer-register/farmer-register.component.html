@@ -1,0 +1,279 @@
+<body>
+
+	<h1>Farmer-Registration</h1>
+	<nav>
+		<ul class="UL">
+			<li><a href="">Home</a></li>
+			<li><a (click)="ClickLogin()">Login</a></li>
+			<li><a (click)="ClickRegister()">Register-As-Farmer</a></li>
+		</ul>
+	</nav>
+
+
+
+	<div class="container">
+		<div class="contact">
+
+
+			<!-- 
+<form id="contact-stack-form" class="form"><div class="container" > -->
+
+
+			<div class="contact">
+
+				<form id="contact-form" (ngSubmit)="onClickSubmit(farmerModel)" name="myForm" #f="ngForm" novalidate>
+
+
+					<div class="form-group">
+						<input type="text" name="firstName" id="name" class="form-control" required minlength="3"
+							maxlength="10" #firstname="ngModel" placeholder="First-Name"
+							[(ngModel)]="farmerModel.firstName">
+						<div class="alert-danger" *ngIf="firstname.invalid && firstname.touched">
+							<div *ngIf="firstname.errors?.['required']">First-Name is required</div>
+							<div *ngIf="firstname.errors?.['minlength']">First-Name must be at least 3 characters</div>
+							<div *ngIf="firstname.errors?.['maxlength']">First-Name must be at most 20 characters</div>
+						</div>
+					</div>
+
+
+
+
+					<div class="form-group">
+
+						<input type="text" name="lastName" id="company" class="form-control" required minlength="3"
+							maxlength="10" #lastname="ngModel" placeholder="Last-Name"
+							[(ngModel)]="farmerModel.lastName">
+						<div class="alert-danger" *ngIf="lastname.invalid && lastname.touched">
+							<div *ngIf="lastname.errors?.['required']">Last-Name is required</div>
+							<div *ngIf="lastname.errors?.['minlength']">Last-Name must be at least 3 characters</div>
+							<div *ngIf="lastname.errors?.['maxlength']">Last-Name must be at most 20 characters</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<input type="email" name="email" id="email" #email="ngModel" class="form-control"
+							placeholder="E-Mail" [(ngModel)]="farmerModel.email" required>
+						<div class="alert-danger" *ngIf="email.invalid && email.touched">
+							<div *ngIf="lastname.errors?.['required']">E-Mail is required</div>
+						</div>
+					</div>
+
+						<div class="form-group">
+
+							<input type="number" name="phone" id="phone" class="form-control" required length="10"
+								#phone="ngModel" placeholder="Phone" [(ngModel)]="farmerModel.contact">
+							<div class="alert-danger" *ngIf="phone.invalid && phone.touched">
+								<div *ngIf="phone.errors?.['required']">Phone is required</div>
+								<div *ngIf="phone.errors?.['length']">Phone must be of 10 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="userName" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #userName="ngModel" placeholder="User-Name"
+								[(ngModel)]="farmerModel.userName">
+							<div class="alert-danger" *ngIf="userName.invalid && userName.touched">
+								<div *ngIf="userName.errors?.['required']">User-Name is required</div>
+								<div *ngIf="userName.errors?.['minlength']">User-Name must be at least 3 characters
+								</div>
+								<div *ngIf="userName.errors?.['maxlength']">User-Name must be at most 20 characters
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="password" name="password" id="phone" class="form-control" required
+								minlength="3" maxlength="10" #password="ngModel" placeholder="Password"
+								[(ngModel)]="farmerModel.password">
+							<div class="alert-danger" *ngIf="password.invalid && password.touched">
+								<div *ngIf="password.errors?.['required']">Password is required</div>
+								<div *ngIf="password.errors?.['minlength']">Password must be at least 3 characters</div>
+								<div *ngIf="password.errors?.['maxlength']">Password must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="houseNo" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #house="ngModel" placeholder="House-No"
+								[(ngModel)]="farmerModel.houseNo">
+							<div class="alert-danger" *ngIf="house.invalid && house.touched">
+								<div *ngIf="house.errors?.['required']">House-No is required</div>
+								<div *ngIf="house.errors?.['minlength']">House-No must be at least 3 characters</div>
+								<div *ngIf="house.errors?.['maxlength']">House-No must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="locality" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #locality="ngModel" placeholder="Locality"
+								[(ngModel)]="farmerModel.locality">
+							<div class="alert-danger" *ngIf="locality.invalid && locality.touched">
+								<div *ngIf="locality.errors?.['required']">Locality is required</div>
+								<div *ngIf="locality.errors?.['minlength']">Locality must be at least 3 characters</div>
+								<div *ngIf="locality.errors?.['maxlength']">Locality must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="town" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #town="ngModel" placeholder="Town" [(ngModel)]="farmerModel.town">
+							<div class="alert-danger" *ngIf="town.invalid && town.touched">
+								<div *ngIf="town.errors?.['required']">Town is required</div>
+								<div *ngIf="town.errors?.['minlength']">Town must be at least 3 characters</div>
+								<div *ngIf="town.errors?.['maxlength']">Town must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="district" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #district="ngModel" placeholder="District"
+								[(ngModel)]="farmerModel.district">
+							<div class="alert-danger" *ngIf="district.invalid && district.touched">
+								<div *ngIf="district.errors?.['required']">District is required</div>
+								<div *ngIf="district.errors?.['minlength']">District must be at least 3 characters</div>
+								<div *ngIf="district.errors?.['maxlength']">District must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="state" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #state="ngModel" placeholder="State" [(ngModel)]="farmerModel.state">
+							<div class="alert-danger" *ngIf="state.invalid && state.touched">
+								<div *ngIf="state.errors?.['required']">State is required</div>
+								<div *ngIf="state.errors?.['minlength']">State must be at least 3 characters</div>
+								<div *ngIf="state.errors?.['maxlength']">State must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="number" name="postalCode" id="phone" class="form-control" required
+								minlength="3" maxlength="10" #postalCode="ngModel" placeholder="Postal-Code"
+								[(ngModel)]="farmerModel.postalCode">
+							<div class="postalCode-danger" *ngIf="postalCode.invalid && postalCode.touched">
+								<div *ngIf="postalCode.errors?.['required']">Postal-Code is required</div>
+								<div *ngIf="postalCode.errors?.['minlength']">Postal-Code must be at least 3 characters
+								</div>
+								<div *ngIf="postalCode.errors?.['maxlength']">Postal-Code must be at most 20 characters
+								</div>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+
+							<input type="number" name="cropId" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #cropId="ngModel" placeholder="Crop-Id" [(ngModel)]="farmerModel.id">
+							<div class="alert-danger" *ngIf="cropId.invalid && cropId.touched">
+								<div *ngIf="cropId.errors?.['required']">Crop-Id is required</div>
+								<div *ngIf="cropId.errors?.['minlength']">Crop-Id must be at least 3 characters</div>
+								<div *ngIf="cropId.errors?.['maxlength']">Crop-Id must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="cropName" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #cropName="ngModel" placeholder="Crop-Name"
+								[(ngModel)]="farmerModel.cropName">
+							<div class="alert-danger" *ngIf="cropName.invalid && cropName.touched">
+								<div *ngIf="cropName.errors?.['required']">Crop-Name is required</div>
+								<div *ngIf="cropName.errors?.['minlength']">Crop-Name must be at least 3 characters
+								</div>
+								<div *ngIf="cropName.errors?.['maxlength']">Crop-Name must be at most 20 characters
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="cropType" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #cropType="ngModel" placeholder="Crop-Type"
+								[(ngModel)]="farmerModel.cropType">
+							<div class="alert-danger" *ngIf="cropType.invalid && cropType.touched">
+								<div *ngIf="cropType.errors?.['required']">Crop-Type is required</div>
+								<div *ngIf="cropType.errors?.['minlength']">Crop-Type must be at least 3 characters
+								</div>
+								<div *ngIf="cropType.errors?.['maxlength']">Crop-Type must be at most 20 characters
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<input type="number" name="cropQuantity" id="phone" class="form-control" required
+								minlength="1" maxlength="5" #cropQuantity="ngModel" placeholder="Crop-Quantity"
+								[(ngModel)]="farmerModel.cropQuantity">
+							<div class="alert-danger" *ngIf="cropQuantity.invalid && cropQuantity.touched">
+								<div *ngIf="cropQuantity.errors?.['required']">Crop-Quantity is required</div>
+								<div *ngIf="cropQuantity.errors?.['minlength']">Crop-Quantity must be at least 1 Digits
+								</div>
+								<div *ngIf="cropQuantity.errors?.['maxlength']">Crop-Quantity must be at most 5 Digits
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="number" name="cropPrice" id="phone" class="form-control" required minlength="2"
+								maxlength="5" #cropPrice="ngModel" placeholder="Crop-Price"
+								[(ngModel)]="farmerModel.price">
+							<div class="alert-danger" *ngIf="cropPrice.invalid && cropPrice.touched">
+								<div *ngIf="cropPrice.errors?.['required']">Crop-Price is required</div>
+								<div *ngIf="cropPrice.errors?.['minlength']">Crop-Price must be at least 2 digits</div>
+								<div *ngIf="cropPrice.errors?.['maxlength']">Crop-Price must be at most 5 digits</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="number" name="bankAccountNo" id="phone" class="form-control" required
+								length="12" #bankAccountNo="ngModel" placeholder="Bank-Account-No"
+								[(ngModel)]="farmerModel.bankAccountNo">
+							<div class="alert-danger" *ngIf="bankAccountNo.invalid && bankAccountNo.touched">
+								<div *ngIf="bankAccountNo.errors?.['required']">Bank-Account-No is required</div>
+								<div *ngIf="bankAccountNo.errors?.['length']">Bank-Account-No must be of least 12
+									characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<input type="text" name="phone" id="phone" class="form-control" required minlength="3"
+								maxlength="10" #ifsc="ngModel" placeholder="IFSC" [(ngModel)]="farmerModel.ifscCode">
+							<div class="alert-danger" *ngIf="ifsc.invalid && ifsc.touched">
+								<div *ngIf="ifsc.errors?.['required']">IFSC is required</div>
+								<div *ngIf="ifsc.errors?.['minlength']">IFSC must be at least 3 characters</div>
+								<div *ngIf="ifsc.errors?.['maxlength']">IFSC must be at most 20 characters</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<input type="text" bankAccountHolderName="phone" id="phone" class="form-control" required
+								minlength="3" maxlength="10" #bankAccountHolderName="ngModel"
+								placeholder="Bank-Account-Holder-Name" [(ngModel)]="farmerModel.bankAccountHolderName">
+							<div class="alert-danger"
+								*ngIf="bankAccountHolderName.invalid && bankAccountHolderName.touched">
+								<div *ngIf="bankAccountHolderName.errors?.['required']">Name is required</div>
+								<div *ngIf="bankAccountHolderName.errors?.['minlength']">Name must be at least 3
+									characters</div>
+								<div *ngIf="bankAccountHolderName.errors?.['maxlength']">Name must be at most 20
+									characters</div>
+							</div>
+						</div>
+
+						<div class="full">
+							<button type="submit">Submit</button>
+						</div>
+
+				</form>
+
+			</div>
+
+
+		</div>

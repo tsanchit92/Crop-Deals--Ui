@@ -1,0 +1,49 @@
+<div class="first">
+    <div class="header">
+
+        <nav>
+            <ul>
+                <li><a routerLink="" routerLinkActive="active">Home</a></li>
+                <li><a routerLink="" routerLinkActive="active">Products</a></li>
+            </ul>
+        </nav>
+        <button class="btn" id="btn1" (click)="clicked()">Log In</button>
+        <button class="btn" id="btn2" (click)="dbclicked()">Sign Up Farmer</button>
+        <button class="btn" id="btn2" (click)="triclicked()">Sign Up Farm</button>
+    </div>
+        <h2><span class="yellow">Products</span></h2>
+
+
+
+        <table class="container">
+            <thead>
+                <tr>
+                    <th>
+                        <h1>Crop-Id</h1>
+                    </th>
+                    <th>
+                        <h1>Crop-Name</h1>
+                    </th>
+                    <th>
+                        <h1>Crop-Type</h1>
+                    </th>
+                    <th>
+                        <h1>Crop-Quantity</h1>
+                    </th>
+                    <th>
+                        <h1>Crop-Price</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of crops">
+                    <td>{{item.id}}</td>
+                    <td>{{item.cropName}}</td>
+                    <td>{{item.cropType}}</td>
+                    <td>{{item.cropQuantity}}</td>
+                    <td>{{item.price}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+</div>

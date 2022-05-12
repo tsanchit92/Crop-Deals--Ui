@@ -1,0 +1,44 @@
+<table class="container">
+    <thead>
+        <tr>
+            <td>
+                UserName
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Email
+            </td>
+            <td>
+                Contact
+            </td>
+            <td>
+                Action
+            </td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let items of farmerModel">
+            <td>
+                {{items.userName}}
+            </td>
+            <td>
+                {{items.firstName}} {{items.lastName}}
+            </td>
+
+            <td>
+                {{items.email}}
+            </td>
+
+            <td>
+                {{items.contact}}
+            </td>
+            <td>
+                <button  style="padding: 0;background-color: red;"(click)="deactivateFarmer(items.userName)">Deactivate User</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+<div style="text-align: center; padding: 10px;margin:10px ">
+    <h3>Add-Crops-Here</h3>
+</div>
+<div class="form-container">
+    <form id="crop-form">
+
+        <div class="row">
+            <label class="col">ID</label>
+            <input class="col" type="number" name="Id" id="Id" required placeholder="ID" [(ngModel)]="crops.id">
+        </div>
+        <div class="row">
+            <label class="col">Crop-Name</label>
+            <input class="col" type="text" name="crop-name" id="Crop-Name" required placeholder="Crop-Name"
+                [(ngModel)]="crops.cropName">
+        </div>
+        <div class="row">
+            <label class="col">Crop-Type</label>
+            <input class="col" type="text" name="Crop-Type" id="Crop-Type" required placeholder="Crop-Name"
+                [(ngModel)]="crops.cropType">
+        </div>
+        <div class="row">
+            <label class="col">Crop-Quantity</label>
+            <input class="col" type="text" name="Crop-Quantity" id="Crop-Quantity" required placeholder="Crop-Quantity"
+                [(ngModel)]="crops.cropQuantity">
+        </div>
+        <div class="row">
+            <label class="col">Price</label>
+            <input class="col" type="text" name="Price" id="Price" required placeholder="Price"
+                [(ngModel)]="crops.price">
+        </div>
+        <div class="row">
+            <button type="submit" (click)="addCrop(crops)">Add-Crop</button>
+        </div>
+    </form>
+</div>

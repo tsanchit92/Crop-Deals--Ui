@@ -1,0 +1,90 @@
+<body>
+	<h1>Dealer Registration</h1>
+	<nav>
+		<ul class="UL">
+			<li><a href="">Home</a></li>
+			<li><a (click)="ClickLogin()">Login</a></li>
+			<li><a (click)="ClickRegister()">Register-As-Farmer</a></li>
+		</ul>
+	</nav>
+	
+
+		<div class="container">
+			<div class="contact">
+
+				<form id="contact-form" (ngSubmit)="onClickSubmit(farmModel)" #f="ngForm" novalidate>
+
+					<div class="form-group">
+						<input type="text" name="name" id="name" required placeholder="Name" required minlength="3"
+						maxlength="10" #name="ngModel"
+							[(ngModel)]="farmModel.name">
+							<div class="alert-danger" *ngIf="name.invalid && name.touched">
+								<div *ngIf="name.errors?.['required']">Name is required</div>
+								<div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</div>
+								<div *ngIf="name.errors?.['maxlength']">Name must be at most 20 characters</div>
+							</div>
+					</div>
+
+					<div>
+						
+						<input type="email" name="email" id="email" required placeholder="E-Mail"
+						required minlength="3"
+						maxlength="10"
+							[(ngModel)]="farmModel.email" #email="ngModel">
+							<div class="alert-danger" *ngIf="email.invalid && email.touched">
+							<div *ngIf="email.errors?.['required']">E-mail is required</div>
+							</div>
+					</div>
+
+					<div>
+						<input type="number" name="phone" id="phone" placeholder="Phone"required length="10"
+							[(ngModel)]="farmModel.contact" #phone="ngModel">
+							<div class="alert-danger" *ngIf="phone.invalid && phone.touched">
+								<div *ngIf="phone.errors?.['required']">Phone is required</div>
+								<div *ngIf="phone.errors?.['minlength']">Phone must be of 10 digits</div>
+							</div>
+					</div>
+
+					<div>
+						
+						<input type="text" name="userName" id="phone" placeholder="User-Name" required minlength="3"
+						maxlength="10"
+							[(ngModel)]="farmModel.userName" #userName="ngModel">
+							<div class="alert-danger" *ngIf="userName.invalid && userName.touched">
+								<div *ngIf="userName.errors?.['required']">userName is required</div>
+								<div *ngIf="userName.errors?.['minlength']">userName must be at least 3 characters</div>
+								<div *ngIf="userName.errors?.['maxlength']">userName must be at most 20 characters</div>
+							</div>
+					</div>
+
+					<div>
+						
+						<input type="password" name="password" id="phone" placeholder="Password" required minlength="5"
+						maxlength="10"
+							[(ngModel)]="farmModel.password" #password="ngModel">
+							<div class="alert-danger" *ngIf="password.invalid && password.touched">
+								<div *ngIf="password.errors?.['required']">Password is required</div>
+								<div *ngIf="password.errors?.['minlength']">Password must be at least 3 characters</div>
+								<div *ngIf="password.errors?.['maxlength']">Password must be at most 20 characters</div>
+							</div>
+					</div>
+
+
+
+					<div class="full">
+						<button type="submit">Submit</button>
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+
+
+		<blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac
+				Asimov</i></blockquote>
+		<br>
+		<blockquote lang="fr">L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase. <i>Pierre
+				Desproges</i></blockquote><br>

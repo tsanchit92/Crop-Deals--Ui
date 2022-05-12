@@ -1,0 +1,54 @@
+<table class="container">
+    <thead>
+        <tr>
+            <td>
+                Date of Order
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Type
+            </td>
+            <td>
+                Price
+            </td>
+            <td>
+                Id
+            </td>
+            <td>
+                Quantity
+            </td>
+            <td>
+                Cost
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let items of orderModel">
+            <td>
+                {{items.date}}
+            </td>
+            <td>
+               {{items.cropName}}
+            </td>
+
+            <td>
+               {{items.cropType}}
+            </td>
+
+            <td>
+                {{items.cropPrice}}
+            </td>
+            <td>
+                {{items.cropId}}
+            </td>
+            <td>
+               {{items.quantity}}
+            </td>
+            <td>
+             {{items.cost}}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+<div style="text-align: center; padding: 10px;margin:10px ">
+    <h3>Profile Edit</h3>
+</div>
+<div class="form-container">
+
+<form id="crop-form" (ngSubmit)="onClickSubmit(farmModel)">
+
+    <div class="row">
+        <label class="col">Name</label>
+        <input class="col" type="text" name="name" id="name" required placeholder="Name" [(ngModel)]="farmModel.name">
+    </div>
+
+    <div class="row">
+        <label class="col">E-mail Address</label>
+        <input class="col" type="email" name="email" id="email" required placeholder="E-Mail"
+            [(ngModel)]="farmModel.email">
+    </div>
+
+    <div class="row">
+        <label class="col">Phone Number</label>
+        <input class="col" type="number" name="phone" id="phone" placeholder="Phone" [(ngModel)]="farmModel.contact">
+    </div>
+
+    <div class="row">
+        <label class="col">User-Name</label>
+        <input class="col" type="text" name="userName" id="phone" placeholder="User-Name"
+            [(ngModel)]="farmModel.userName">
+    </div>
+
+    <div class="row">
+        <label class="col">Password</label>
+        <input class="col" type="password" name="password" id="phone" placeholder="Password"
+            [(ngModel)]="farmModel.password">
+    </div>
+
+
+
+    <div  class="row" >
+        <button type="submit">Submit</button>
+        </div>
+
+
+</form>
+</div>
