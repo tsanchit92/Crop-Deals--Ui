@@ -74,6 +74,11 @@
 					<div class="full">
 						<button type="submit">Submit</button>
 					</div>
+					<div class="alert alert-danger" *ngIf="error!=='' ">
+						<div>Plz check ur data and try again !<br>
+						{{error}}
+						</div>
+					</div>
 
 				</form>
 

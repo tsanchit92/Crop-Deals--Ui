@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 export class FarmerRegisterComponent implements OnInit {
 
   farmerModel = new FarmerModel();
+  error:string="";
 
   constructor(private http: HttpClient
     ,private router:Router) {
-
-
   }
+
 
   ngOnInit(): void {
 
@@ -38,7 +38,14 @@ export class FarmerRegisterComponent implements OnInit {
         console.log(data);
         alert("Registered Successfully")
 
-      })
+      },
+      error=>{
+      
+        this.error=error.message;
+          
+        console.log(this.error);
+     
+      });
 
 
 

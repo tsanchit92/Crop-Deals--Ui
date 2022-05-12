@@ -58,7 +58,7 @@ export class FarmerLoginComponent implements OnInit {
       },
       error=>{
       
-          this.error=error.message;
+        this.error=error;
           
         console.log(this.error);
       });

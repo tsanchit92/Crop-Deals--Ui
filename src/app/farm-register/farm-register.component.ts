@@ -10,6 +10,8 @@ import { FarmModel } from '../farm-model';
 })
 export class FarmRegisterComponent implements OnInit {
   farmModel = new FarmModel();
+  error:string="";
+  
 
   constructor(private http: HttpClient,
     private router:Router) { }
@@ -23,7 +25,12 @@ export class FarmRegisterComponent implements OnInit {
       .subscribe(data => {
         console.log(data);
         alert("Registered Successfully")
-      })
+      },
+      error=>{
+      
+        this.error=error.message;
+        console.log(this.error);
+      });
   }
   ClickLogin()
   {

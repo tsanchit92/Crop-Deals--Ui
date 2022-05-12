@@ -2,17 +2,20 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+
 }
-.container {
-    height: 100vh;
+body {
+    height: 100%;
     width: 100%;
-    background-image: url(../images/pexels-pixabay-325944.jpg);
+    background-image: url(../images/pexels-pixabay-325944.jpg) ;
     background-position: center;
-    background-size: cover;
-    padding-right: 3%;
-    padding-left: 5%;
-    box-sizing: border-box;
-    position: relative;
+    background-size: auto;
+  
+}
+.container
+{
+  padding-right: 3%;
+  padding-left: 5%; 
 }
 .header {
     width: 100%;
@@ -146,12 +149,11 @@ html,body {
     background-color: #070617;
   }
   .dummy_page {
-    height: 200px;
+    height: 0px;
     width: 100%;
-    background-color: #f0f0f0;
     text-align: center;
     box-sizing: border-box;
-    padding: 60px 0px;
+    padding: 100px 0px;
   }
   /* STYLES SPECIFIC TO FOOTER  */
   .footer {
