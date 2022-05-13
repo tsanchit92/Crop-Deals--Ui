@@ -27,6 +27,7 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderComponent } from './order/order.component';
 import { GetFarmOrdersComponent } from './get-farm-orders/get-farm-orders.component';
+import { SoldCropsComponent } from './sold-crops/sold-crops.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { GetFarmOrdersComponent } from './get-farm-orders/get-farm-orders.compon
     ProductComponent,
     ContactComponent,
     OrderComponent,
-    GetFarmOrdersComponent
+    GetFarmOrdersComponent,
+    SoldCropsComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,7 @@ import { OrderComponent } from './order/order.component';
 import { ProductComponent } from './product/product.component';
 import { ShowDealersComponent } from './show-dealers/show-dealers.component';
 import { ShowFarmerComponent } from './show-farmer/show-farmer.component';
+import { SoldCropsComponent } from './sold-crops/sold-crops.component';
 
 
 const routes: Routes = [
@@ -65,6 +66,7 @@ const routes: Routes = [
         { path: "crops", component: CropsComponent },
         { path: "editProfile", component: EditProfileComponent },
         { path: "addCrops", component: AddCropsComponent },
+        { path: "soldCrops", component: SoldCropsComponent },
       ]
   },
 
@@ -109,7 +111,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [AdminLoginComponent, AdminDashboardComponent, EditFarmProfileComponent,
+export const routingComponents = [SoldCropsComponent, AdminLoginComponent, AdminDashboardComponent, EditFarmProfileComponent,
   GetCartComponent, FarmDashboardComponent, CropsComponent,
   EditProfileComponent, AddCropsComponent, FarmerLoginComponent, FarmerRegisterComponent,
   FarmLoginComponent, FarmRegisterComponent, FarmerDahboardComponent, ShowDealersComponent,

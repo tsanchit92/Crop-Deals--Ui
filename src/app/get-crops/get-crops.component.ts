@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { empty } from 'rxjs';
 import { Address } from '../address';
 import { BankAccountDetails } from '../bank-account-details';
 import { Cart } from '../cart';
@@ -37,7 +38,7 @@ export class GetCropsComponent implements OnInit {
   onAddCrt(item:any)
   {   
     item.quantity=parseInt(window.prompt("Enter Quantity")!)
-    if(item.quantity<=0)
+    if(item.quantity<=0 || typeof item.quantity ==='undefined')
     {
       alert("add proper quantity")
     }

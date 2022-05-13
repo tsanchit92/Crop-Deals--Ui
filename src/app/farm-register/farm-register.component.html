@@ -16,7 +16,7 @@
 
 					<div class="form-group">
 						<input type="text" name="name" id="name" required placeholder="Name" required minlength="3"
-						maxlength="10" #name="ngModel"
+						maxlength="20" #name="ngModel"
 							[(ngModel)]="farmModel.name">
 							<div class="alert-danger" *ngIf="name.invalid && name.touched">
 								<div *ngIf="name.errors?.['required']">Name is required</div>
@@ -29,7 +29,7 @@
 						
 						<input type="email" name="email" id="email" required placeholder="E-Mail"
 						required minlength="3"
-						maxlength="10"
+						maxlength="20"
 							[(ngModel)]="farmModel.email" #email="ngModel">
 							<div class="alert-danger" *ngIf="email.invalid && email.touched">
 							<div *ngIf="email.errors?.['required']">E-mail is required</div>
@@ -48,7 +48,7 @@
 					<div>
 						
 						<input type="text" name="userName" id="phone" placeholder="User-Name" required minlength="3"
-						maxlength="10"
+						maxlength="20"
 							[(ngModel)]="farmModel.userName" #userName="ngModel">
 							<div class="alert-danger" *ngIf="userName.invalid && userName.touched">
 								<div *ngIf="userName.errors?.['required']">userName is required</div>
@@ -60,7 +60,7 @@
 					<div>
 						
 						<input type="password" name="password" id="phone" placeholder="Password" required minlength="5"
-						maxlength="10"
+						maxlength="12"
 							[(ngModel)]="farmModel.password" #password="ngModel">
 							<div class="alert-danger" *ngIf="password.invalid && password.touched">
 								<div *ngIf="password.errors?.['required']">Password is required</div>

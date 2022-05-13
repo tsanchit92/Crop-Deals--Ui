@@ -18,7 +18,7 @@ export class CropsComponent implements OnInit {
   ngOnInit(): void {
     
     var header =this.util.authHeader();
-    this.http.get("http://localhost:8000/farmer/getFarmerCrops/" + localStorage.getItem("userName"),{headers:header}).subscribe((data:any) => {
+    this.http.get("http://localhost:10000/farmer/getFarmerCrops/" + localStorage.getItem("userName"),{headers:header}).subscribe((data:any) => {
       this.crops=data;
       console.log(this.crops);
 

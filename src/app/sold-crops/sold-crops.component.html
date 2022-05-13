@@ -1,0 +1,48 @@
+<table class="container">
+    <thead>
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Quantity
+            </td>
+            <td>
+                CropName
+            </td>
+            <td>
+                cropType
+            </td>
+            <td>
+                Price
+            </td>
+            <td>
+                Cost
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let items of soldCrops">
+            <td>
+                {{items.soldId}}
+            </td>
+            <td>
+               {{items.quantitySold}}
+            </td>
+
+            <td>
+               {{items.cropName}}
+            </td>
+
+            <td>
+                {{items.cropType}}
+            </td>
+            <td>
+                {{items.cropPrice}}
+            </td>
+            <td>
+               {{items.cost}}
+            </td>
+        </tr>
+    </tbody>
+</table>
